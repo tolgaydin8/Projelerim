@@ -20,13 +20,12 @@ if __name__ == "__main__":
             random.shuffle(liste)
             print("Şifeniz: "+ "".join(liste[0:uzunluk]))
     
-    try:
-        random_sifre()
-    except ValueError:
-        print("lütfen sayı giriniz")
-        random_sifre()
-    
+    while True:    
+        try:
+            random_sifre()
+            break
+        except ValueError:
+            print("lütfen sayı giriniz")
         
-
 
 
