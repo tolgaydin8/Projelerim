@@ -12,7 +12,6 @@ def uyari_kutusu2():
     messagebox.showinfo("UYARI!","""Mola bitti pomodoraya devam
     Hazır olunca Tamam'a bas """)
     
-
 def pomodoro_25_dk(): # 25 dk pomodoro ve molanın fonksiyonu
     for i in range(26):
         print(str(25-i)+ " dakika kaldı")
@@ -28,8 +27,6 @@ def pomodoro_kısa_molda_5_dk():
         os.system("cls")
         if j == 5:
             uyari_kutusu2()
-
-
 
 def pomodoro_uzun_mola_15_dk():
     for j in range (15):
@@ -58,7 +55,6 @@ def pomodoro_custom_kısa_mola():
             uyari_kutusu2()
 
 
-
 def pomodoro_uzun_mola_custom():
     for j in range (uzun_süresi+1):
         print("Molanızın bitmesine "+ str(uzun_süresi - j) + " dakika kaldı")
@@ -67,40 +63,43 @@ def pomodoro_uzun_mola_custom():
         if j == uzun_süresi:
             uyari_kutusu2()
 
-
-
 print("""Merhaba Pomodoro Zamanlayıcısına Hoşgeldin :)
 Nasıl bir pomodoro istediğini tuşar mısın? 
 1- Klasik pomodoro (25-5-15-4)
 2-Custom""")
-sayı = int(input(" "))
-try:
-    if sayı == 1:
-        for j in range(4):
-            pomodoro_25_dk()
-            pomodoro_kısa_molda_5_dk()
-            pomodoro_25_dk()
-            pomodoro_kısa_molda_5_dk()
-            pomodoro_25_dk()                      #1. Pomodoro dönügüsü
-            pomodoro_kısa_molda_5_dk() 
-            pomodoro_25_dk()
-            pomodoro_uzun_mola_15_dk()
-        messagebox.showinfo("UYARI!","""Pomodoron bitti tebrikler!!.""")
 
-    elif sayı == 2 :
-        ders_süresi = int(input("ders süresini dakika cinsinen tuşlayınız: "))
-        mola_süresi = int(input("Mola süresini dakika cinsinden tuşlayınız: "))
-        uzun_süresi = int(input("uzun molda süresini dakika cinsinden tuşlayınız: "))
-        tekrar = int (input("tekrar sayısı tuşlayınız: "))
+while True:
+    try:
+        sayı = int(input(" "))
+    except:
+        pass
+    try:
+        if sayı == 1:
+            for j in range(4):
+                pomodoro_25_dk()
+                pomodoro_kısa_molda_5_dk()
+                pomodoro_25_dk()
+                pomodoro_kısa_molda_5_dk()
+                pomodoro_25_dk()                      #1. Pomodoro dönügüsü
+                pomodoro_kısa_molda_5_dk() 
+                pomodoro_25_dk()
+                pomodoro_uzun_mola_15_dk()
+            messagebox.showinfo("UYARI!","""Pomodoron bitti tebrikler!!.""")
 
-    for i in range(tekrar):
-        pomodoro_custom_ders()
-        pomodoro_custom_kısa_mola()
-        pomodoro_custom_ders()
-        pomodoro_custom_kısa_mola()
-        pomodoro_custom_ders()
-        pomodoro_custom_kısa_mola()
-        pomodoro_custom_ders()
-        pomodoro_uzun_mola_custom()
-except:
-    print("Lütfen düzgün bir değer giriniz")
+        elif sayı == 2 :
+            ders_süresi = int(input("ders süresini dakika cinsinen tuşlayınız: "))
+            mola_süresi = int(input("Mola süresini dakika cinsinden tuşlayınız: "))
+            uzun_süresi = int(input("uzun molda süresini dakika cinsinden tuşlayınız: "))
+            tekrar = int (input("tekrar sayısı tuşlayınız: "))
+
+        for i in range(tekrar):
+            pomodoro_custom_ders()
+            pomodoro_custom_kısa_mola()
+            pomodoro_custom_ders()
+            pomodoro_custom_kısa_mola()
+            pomodoro_custom_ders()
+            pomodoro_custom_kısa_mola()
+            pomodoro_custom_ders()
+            pomodoro_uzun_mola_custom()
+    except:
+        print("Lütfen Geçerli bir değer girin")
