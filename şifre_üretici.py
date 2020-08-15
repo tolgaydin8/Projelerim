@@ -1,5 +1,6 @@
 import string
 import random
+import os
 
 if __name__ == "__main__":
     harfler = string.ascii_letters # Büyüklü küçüklü harfler 
@@ -9,14 +10,17 @@ if __name__ == "__main__":
     liste.extend(list(harfler))
     liste.extend(list(rakamlar))
     liste.extend(bazi_semboller)
-    def random_sifre():    
-        uzunluk = abs(int(input("Lütfen şifrenin uzunluğunu giriniz: "))) 
+    def random_sifre():
+        os.system("cls")    
+        uzunluk = abs(int(input("Lütfen rastgele şifre için 7'den büyük sayı giriniz: "))) 
         while uzunluk < 8:
-            print("lütfen 8'den fazla sayı giriniz")
+            os.system("cls")
+            print("lütfen 7'den fazla sayı giriniz")
             uzunluk =abs(int(input("Lütfen şifrenin uzunluğunu giriniz: ")))
             
             continue
         else:
+            os.system("cls") 
             random.shuffle(liste)
             print("Şifeniz: "+ "".join(liste[0:uzunluk]))
     
@@ -24,7 +28,8 @@ if __name__ == "__main__":
         try:
             random_sifre()
             break
-        except ValueError:
+        except :
+            os.system("cls")    
             print("lütfen sayı giriniz")
         
 
