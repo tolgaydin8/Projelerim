@@ -66,7 +66,7 @@ def pomodoro_uzun_mola_custom():
 print("""Merhaba Pomodoro Zamanlayıcısına Hoşgeldin :)
 Nasıl bir pomodoro istediğini tuşar mısın? 
 1- Klasik pomodoro (25-5-15-4)
-2-Custom""")
+2- Kendim yapmak istiyorum """)
 
 while True:
     try:
@@ -87,10 +87,12 @@ while True:
             messagebox.showinfo("UYARI!","""Pomodoron bitti tebrikler!!.""")
 
         elif sayı == 2 :
+            os.system("cls")
             ders_süresi = int(input("ders süresini dakika cinsinen tuşlayınız: "))
             mola_süresi = int(input("Mola süresini dakika cinsinden tuşlayınız: "))
             uzun_süresi = int(input("uzun molda süresini dakika cinsinden tuşlayınız: "))
             tekrar = int (input("tekrar sayısı tuşlayınız: "))
+    
 
         for i in range(tekrar):
             pomodoro_custom_ders()
@@ -102,4 +104,7 @@ while True:
             pomodoro_custom_ders()
             pomodoro_uzun_mola_custom()
     except:
-        print("Lütfen Geçerli bir değer girin")
+        os.system("cls")
+        print("""Girdiğiniz değer geçersiz lütfen nasıl bir pomodoro istediğinizi tuşlar mısınız?
+        1- Klasik pomodoro (25-5-15-4)
+        2-Custom""")
