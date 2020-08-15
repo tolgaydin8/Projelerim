@@ -5,7 +5,7 @@ import os
 if __name__ == "__main__":
     harfler = string.ascii_letters # Büyüklü küçüklü harfler 
     rakamlar = string.digits #0123456789
-    bazi_semboller = ["!","?","%","/","&","<",">",".",",","_","=","+","-","*",")","("]
+    bazi_semboller = ["!","?","%","/","&","<",">",".",",","_","=","+","-","*",")","("] #bunu böyle yazmamın sebebi diğer değişik karakterleri (} , { , | , ` vb ) istemememden kaynaklı
     liste = []
     liste.extend(list(harfler))
     liste.extend(list(rakamlar))
