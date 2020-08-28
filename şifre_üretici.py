@@ -5,18 +5,18 @@ import os
 if __name__ == "__main__":
     harfler = string.ascii_letters # Büyüklü küçüklü harfler 
     rakamlar = string.digits #0123456789
-    bazi_semboller = ["!","?","%","/","&","<",">",".",",","_","=","+","-","*",")","("] #bunu böyle yazmamın sebebi diğer değişik karakterleri (} , { , | , ` vb ) istemememden kaynaklı
+    bazi_semboller = string.punctuation #semboller 
     liste = []
     liste.extend(list(harfler))
     liste.extend(list(rakamlar))
-    liste.extend(bazi_semboller)
+    liste.extend(list(bazi_semboller))
     def random_sifre():
         os.system("cls")    
-        uzunluk = abs(int(input("Lütfen rastgele şifre için 7'den büyük sayı giriniz: "))) 
+        uzunluk = abs(int(input("Lütfen rastgele şifreniz için 7'den büyük olucak şekilde şifre uzunluğunu tam sayı olarak giriniz : "))) 
         while uzunluk < 8:
             os.system("cls")
-            print("lütfen 7'den fazla sayı giriniz")
-            uzunluk =abs(int(input("Lütfen şifrenin uzunluğunu giriniz: ")))
+            
+            uzunluk =abs(int(input("Lütfen rastgele şifreniz için 7'den büyük olucak şekilde şifre uzunluğunu tam sayı olarak giriniz :")))
             
             continue
         else:
@@ -29,8 +29,5 @@ if __name__ == "__main__":
             random_sifre()
             break
         except :
-            os.system("cls")    
-            print("lütfen sayı giriniz")
+            pass
         
-
-
