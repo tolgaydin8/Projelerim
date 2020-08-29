@@ -29,5 +29,5 @@ if __name__ == "__main__":
             random_sifre()
             break
         except :
-            pass
+            continue
         
