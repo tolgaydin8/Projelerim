@@ -107,4 +107,4 @@ while True:
         os.system("cls")
         print("""Girdiğiniz değer geçersiz lütfen nasıl bir pomodoro istediğinizi tuşlar mısınız?
         1- Klasik pomodoro (25-5-15-4)
-        2-Custom""")
+        2- Kendim yapmak istiyorum
